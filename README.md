@@ -3,6 +3,8 @@ Our raytracing submission for the Computer Graphics course competition
 
 <p align="center">
   <img src="Gifs/zoom1.gif" width="400" title="zoom1">
+  <img src="Gifs/flyover1.gif" width="400" title="flyover1">
+  <img src="Gifs/zoom2.gif" width="400" title="zoom2">
  </p>
 
 Starting off from our last raytracing assignment, we have created a number of new frames using the Boost implementation of MPI on the Peregrine cluster. Following that, we assembled our frames into gifs in an attempt to create smooth animations.
