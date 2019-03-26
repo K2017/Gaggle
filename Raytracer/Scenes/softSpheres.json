@@ -1,0 +1,85 @@
+{
+    "Eye": [200, 250, 1000],
+    "Look": [0, 0, 0],
+    "Shadows": true,
+    "SoftShadows": true,
+    "Reflections": true,
+    "Refraction": true,
+    "ReflectionScattering": false,
+    "RefractionScattering": false,
+    "MaxRecursionDepth": 2,
+    "SuperSamplingFactor": 2,
+    "Lights": [
+        {
+            "position": [-200, 600, 1500],
+            "color": [0.8, 0.8, 0.8]
+        },
+        {
+            "position": [600, 600, 1500],
+            "color": [0.8, 0.8, 0.8]
+        }
+    ],
+    "Objects": [
+        {
+            "type": "sphere",
+            "comment": "White sphere",
+            "position": [170, 200, 500],
+            "radius": 30,
+            "material":
+            {
+                "color": [1.0, 1.0, 1.0],
+                "ka": 0.2,
+                "kd": 0.7,
+                "ks": 1.0,
+                "ior": 3.5,
+                "n": 64
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Yellow sphere",
+            "position": [230, 200, 500],
+            "radius": 30,
+            "material":
+            {
+                "color": [1.0, 1.0, 0.0],
+                "ka": 0.2,
+                "kd": 0.3,
+                "ks": 0.5,
+                "ior": 2.4,
+                "n": 8
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Refractive sphere",
+            "position": [200, 200, 550],
+            "radius": 30,
+            "material":
+            {
+                "color": [0.1, 0.0, 0.0],
+                "ka": 0.2,
+                "kd": 0.3,
+                "ks": 1,
+                "ior": 1.52,
+                "refract": true,
+                "scatter": 0.3,
+                "n": 32
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Grey sphere",
+            "position": [200, -9830, 500],
+            "radius": 10000,
+            "material":
+            {
+                "color": [0.5, 0.5, 0.5],
+                "ka": 0.2,
+                "kd": 0.8,
+                "ks": 0,
+                "n": 1
+            }
+        }
+    ]
+}

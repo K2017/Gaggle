@@ -1,0 +1,174 @@
+{
+    "Eye": [200, 200, 1000],
+    "Shadows": true,
+    "Reflections": true,
+    "Refraction": true,
+    "ReflectionScattering": true,
+    "RefractionScattering": true,
+    "MaxRecursionDepth": 2,
+    "SuperSamplingFactor": 2,
+    "Lights": [
+        {
+            "position": [-200, 600, 1500],
+            "color": [0.4, 0.4, 0.8]
+        },
+        {
+            "position": [600, 600, 1500],
+            "color": [0.8, 0.8, 0.4]
+        }
+    ],
+    "Objects": [
+        {
+            "type": "sphere",
+            "comment": "Blue sphere",
+            "position": [90, 320, 100],
+            "radius": 50,
+            "material":
+            {
+                "color": [0.0, 0.0, 1.0],
+                "ka": 0.2,
+                "kd": 0.7,
+                "ks": 0.5,
+                "ior": 2.97,
+                "n": 64
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Green sphere",
+            "position": [210, 270, 300],
+            "radius": 50,
+            "material":
+            {
+                "color": [0.0, 1.0, 0.0],
+                "ka": 0.2,
+                "kd": 0.3,
+                "ks": 0.5,
+                "ior": 2.4,
+                "n": 8
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Refractive sphere",
+            "position": [240, 240, 550],
+            "radius": 30,
+            "material":
+            {
+                "color": [0.0, 0.0, 0.0],
+                "ka": 0.2,
+                "kd": 0.3,
+                "ks": 1,
+                "ior": 2.4,
+                "refract": true,
+                "scatter": 0.5,
+                "n": 32
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Red sphere",
+            "position": [290, 170, 150],
+            "radius": 50,
+            "material":
+            {
+                "color": [1.0, 0.0, 0.0],
+                "ka": 0.2,
+                "kd": 0.7,
+                "ks": 0.8,
+                "n": 32
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Earth sphere",
+            "position": [140, 220, 400],
+            "radius": 50,
+            "rotation": [90,90,0],
+            "angle": 90,
+            "material":
+            {
+                "comment": "image is relative to scene file here!",
+                "diffuse": "earthmap1k.png",
+                "specular": "earthspec1k.png",
+                "normal": "earthnorm1k.png",
+                "ka": 0.2,
+                "kd": 0.8,
+                "ks": 0.5,
+                "ior": 1.333,
+                "scatter": 0.3,
+                "refract": true,
+                "n": 32
+            }
+        },
+        {
+            "type": "torus",
+            "comment": "The Halo",
+            "position": [240, 150, 450],
+            "rotation": [45, 0, 0],
+            "scale": [5, 5, 5],
+            "inner radius": 5,
+            "ring radius": 2,
+            "material":
+            {
+                "diffuse": "earthmap1k.png",
+                "specular": "earthspec1k.png",
+                "normal": "earthnorm1k.png",
+                "ka": 0.2,
+                "kd": 0.8,
+                "ks": 1.0,
+                "ior": 1.333,
+                "refract": false,
+                "n": 32
+            }
+        },
+        {
+            "type": "torus",
+            "comment": "Yellow torus",
+            "position": [220, 160, 430],
+            "rotation": [135, -45, 0],
+            "scale": [5, 5, 5],
+            "inner radius": 5,
+            "ring radius": 1.5,
+            "material":
+            {
+                "color": [1.0, 1.0, 0.0],
+                "ka": 0.2,
+                "kd": 0.8,
+                "ks": 0.5,
+                "ior": 1.5,
+                "scatter": 0.5,
+                "refract": true,
+                "n": 32
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Orange sphere",
+            "position": [110, 130, 200],
+            "radius": 50,
+            "material":
+            {
+                "color": [1.0, 0.5, 0.0],
+                "ka": 0.2,
+                "kd": 0.8,
+                "ks": 0.5,
+                "n": 32
+            }
+        },
+        {
+            "type": "sphere",
+            "comment": "Grey sphere",
+            "position": [200, 200, -1000],
+            "radius": 1000,
+            "material":
+            {
+                "color": [0.4, 0.4, 0.4],
+                "ka": 0.2,
+                "kd": 0.8,
+                "ks": 0,
+                "n": 1
+            }
+        }
+    ]
+}
