@@ -172,11 +172,3 @@ by `.png`.
     which will define the color, reflectivity and normals of an object.
     
     If a diffuse map is not defined the "color" parameter will be used instead.
-    
-* Added lines of feedback below. 
-
-    One of the problems we ran into along the way was not considering shadow acne.
-    It took a while to figure that out, also because we did not get it clearly enough
-    from the lectures. It would be nice if concepts this important were emphasised more.
-    Without this, it is not very clear to us what we should focus on most. 
-    That aside, this was rather enjoyable overall.
