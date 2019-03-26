@@ -1,8 +1,7 @@
 # Flock
 Our raytracing submission for the Computer Graphics course competition
 
-[[https://github.com/iriediese/Flock/master/Gifs/zoom1.gif|alt=zoom1]]
-![Alt text](Gifs/zoom1.gif?raw=true "zoom1")
+![zoom1](Gifs/zoom1.gif?raw=true "zoom1"align=center)
 
 Starting off from our last raytracing assignment, we have created a number of new frames using the Boost implementation of MPI on the Peregrine cluster. Following that, we assembled our frames into gifs in an attempt to create smooth animations.
 
