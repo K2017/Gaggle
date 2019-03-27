@@ -1,0 +1,61 @@
+{
+    "Shadows": true,
+    "Reflections": true,
+    "Refraction": true,
+    "Eye": [200, 200, 1000],
+    "Lights": [
+        {
+            "position": [-200, 600, 1500],
+            "color": [1.0, 1.0, 1.0]
+        }
+    ],
+    "Objects": [
+        {
+            "type": "sphere",
+            "comment": "White sphere",
+            "position": [170, 200, -1000],
+            "radius": 1000,
+            "material":
+            {
+                "color": [1.0, 1.0, 1.0],
+                "ka": 0.2,
+                "kd": 0.7,
+                "ks": 1.0,
+                "ior": 3.5,
+                "n": 64
+            }
+        },
+	{
+            "type": "sphere",
+            "comment": "White sphere",
+            "position": [170, -9887, 500],
+            "radius": 10000,
+            "material":
+            {
+                "color": [1.0, 1.0, 1.0],
+                "ka": 0.2,
+                "kd": 0.7,
+                "ks": 1.0,
+                "ior": 3.5,
+                "n": 64
+            }
+        },
+        {
+            "type": "mesh",
+            "comment": "disco",
+            "model": "reducedbunny.obj",
+            "position": [200, 200, 500],
+            "rotation": [0, 0, 0],
+            "scale": [100, 100, 100],
+            "material":
+            {
+                "color": [0, 0.5, 0.5],
+                "ka": 0.2,
+                "kd": 0.7,
+                "ks": 0.5,
+                "n": 64,
+		"refract": true
+            }
+        }
+    ]
+}
