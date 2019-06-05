@@ -3,8 +3,10 @@
     "Shadows": true,
     "Reflections": true,
     "Refraction": true,
+    "ReflectionScattering": true,
+    "RefractionScattering": true,
     "MaxRecursionDepth": 2,
-    "SuperSamplingFactor": 1,
+    "SuperSamplingFactor": 2,
     "Lights": [
         {
             "position": [-200, 600, 1500],

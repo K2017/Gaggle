@@ -1,17 +1,13 @@
 #include "raytracer.h"
 
-#include <boost/mpi/environment.hpp>
-#include <boost/mpi/communicator.hpp>
 #include <iostream>
 #include <string>
 
 
 using namespace std;
-namespace mpi = boost::mpi;
 
 int main(int argc, char *argv[])
 {
-	mpi::environment env;
     cout << "Introduction to Computer Graphics - Raytracer\n\n";
 
     if (argc < 2 || argc > 3)

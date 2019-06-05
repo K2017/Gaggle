@@ -1,5 +1,4 @@
-#ifndef OBJLOADER_H_
-#define OBJLOADER_H_
+#pragma once
 
 // Pro C++ Tip: only include header of types/classes you use in your
 // header file (.h), other headers you need should go in your source
@@ -90,5 +89,3 @@ class OBJLoader
                              bool keepEmpty = true);
 
 };
-
-#endif // OBJLOADER_H_

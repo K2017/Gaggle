@@ -1,5 +1,4 @@
-#ifndef RAYTRACER_H_
-#define RAYTRACER_H_
+#pragma once
 
 #include "scene.h"
 
@@ -33,5 +32,3 @@ class Raytracer
 
         unsigned int imgSize[2] = {400, 400};
 };
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef OBJECT_H_
-#define OBJECT_H_
+#pragma once
 
 #include "material.h"
 
@@ -45,5 +44,3 @@ private:
 
     void applyTransform();
 };
-
-#endif

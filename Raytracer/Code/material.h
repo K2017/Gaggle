@@ -1,10 +1,6 @@
-#include <utility>
+#pragma once
 
 #include <utility>
-
-#ifndef MATERIAL_H_
-#define MATERIAL_H_
-
 #include <limits>
 #include "triple.h"
 #include "image.h"
@@ -48,5 +44,3 @@ public:
             normal(nullptr)
             {}
 };
-
-#endif

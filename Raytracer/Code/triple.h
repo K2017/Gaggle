@@ -1,10 +1,8 @@
-#ifndef TRIPLE_H_
-#define TRIPLE_H_
+#pragma once
 
 #include "json/json_fwd.h"
 
 #include <iosfwd>
-#include <boost/mpi.hpp>
 
 // Color, Point and Vector are all Triples (name them so)
 class Triple;
@@ -16,8 +14,6 @@ class Triple
 {
     public:
 // --- data members ------------------------------------------------------------
-
-		friend class boost::serialization::access;
         // union to access the same elements by
         // x, y, z, or r, g, b or data[index]
         union {
@@ -33,14 +29,6 @@ class Triple
                 double b;
             };
         };
-        
-		template<class Archive>
-		void serialize(Archive & ar, const unsigned int version)
-		{
-			ar & x;
-			ar & y;
-			ar & z;
-		}
 
 // --- Constructors ------------------------------------------------------------
 
@@ -106,5 +94,3 @@ Triple operator*(double f, Triple const &t);
 
 std::istream &operator>>(std::istream &is, Triple &t);
 std::ostream &operator<<(std::ostream &os, Triple const &t);
-
-#endif

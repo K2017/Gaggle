@@ -25,6 +25,6 @@ do
 	
 #	rm $file
 done
-echo $reps
+echo $i
 
 

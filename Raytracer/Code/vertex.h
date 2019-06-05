@@ -1,5 +1,4 @@
-#ifndef VERTEX_H_
-#define VERTEX_H_
+#pragma once
 
 struct Vertex
 {
@@ -12,5 +11,3 @@ struct Vertex
     float u;    // u (or s) coordinate of texture
     float v;    // v (or t) coordinate of texture
 };
-
-#endif

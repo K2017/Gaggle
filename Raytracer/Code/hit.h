@@ -1,7 +1,6 @@
-#include <memory>
+#pragma once
 
-#ifndef HIT_H_
-#define HIT_H_
+#include <memory>
 
 #include "triple.h"
 #include <limits>
@@ -33,5 +32,3 @@ public:
         return no_hit;
     }
 };
-
-#endif

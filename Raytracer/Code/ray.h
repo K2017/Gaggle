@@ -1,5 +1,4 @@
-#ifndef RAY_H_
-#define RAY_H_
+#pragma once
 
 #include "triple.h"
 
@@ -20,5 +19,3 @@ class Ray
             return O + t * D;
         }
 };
-
-#endif

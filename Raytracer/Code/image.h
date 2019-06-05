@@ -1,24 +1,17 @@
-#ifndef IMAGE_H_
-#define IMAGE_H_
+#pragma once
 
 #include "triple.h"
 
-#include <boost/mpi.hpp>
 #include <string>
 #include <vector>
 #include <memory>
 
 
-namespace mpi = boost::mpi;
-
 class Image
 {
     std::vector<Color> d_pixels;
-    std::unique_ptr<Color[]> data;
     unsigned d_width;
     unsigned d_height;
-    unsigned blockSize;
-    unsigned offset;
 
     public:
         Image(unsigned width = 0, unsigned height = 0);
@@ -31,11 +24,8 @@ class Image
         // Handier accessors
         // Usage: color = img(x,y);
         //        img(x,y) = color;
-        //Color const &operator()(unsigned x, unsigned y) const;
-        //Color &operator()(unsigned x, unsigned y);
-        
-        Color const &operator()(unsigned i, unsigned j) const {return data[d_width * i + j - offset];}
-        Color &operator()(unsigned i, unsigned j) {return data[d_width * i + j - offset];}
+        Color const &operator()(unsigned x, unsigned y) const;
+        Color &operator()(unsigned x, unsigned y);
 
         unsigned width() const;
         unsigned height() const;
@@ -45,29 +35,8 @@ class Image
         // usefull for texture access
         Color const &colorAt(float x, float y) const;
 
-		void gather();
         void write_png(std::string const &filename) const;
         void read_png(std::string const &filename);
-        
-        template <typename Function> void
-		  each(Function function)
-		  {
-			for (unsigned i = 0; i < d_height; ++i) {
-			  for (unsigned j = 0; j < d_width; ++j) {
-				function((*this)(i, j), i, j);
-			  }
-			}
-		  }
-		  
-		  template <typename Function> void
-		  each(Function function) const
-		  {
-			for (unsigned i = 0; i < d_height; ++i) {
-			  for (unsigned j = 0; j < d_width; ++j) {
-				function((*this)(i, j), i, j);
-			  }
-			}
-		}
 
     private:
         inline unsigned index(unsigned x, unsigned y) const
@@ -83,5 +52,3 @@ class Image
         }
 
 };
-
-#endif

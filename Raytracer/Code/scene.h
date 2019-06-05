@@ -1,16 +1,12 @@
-#ifndef SCENE_H_
-#define SCENE_H_
+#pragma once
 
 #include "light.h"
 #include "object.h"
 #include "triple.h"
 
-#include <boost/mpi/environment.hpp>
-#include <boost/mpi/communicator.hpp>
 #include <vector>
 #include <random>
 
-namespace mpi = boost::mpi;
 // Forward declerations
 class Ray;
 class Image;
@@ -61,5 +57,3 @@ private:
     Vector const refract(const Vector &I, const Vector &N, const double &ior);
     double fresnel(const Vector &I, const Vector &N, const double &ior);
 };
-
-#endif
